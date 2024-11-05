@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Moodify..</title>
+    <link rel="icon" type="image/x-icon" href="/images/spotify-white-icon.webp">
+</head>
+
+<body class="bg-black">
+    <div class="CONTAINER flex">
+        <div class="left custom-class xl:w-[27vw] m-2">
+            <div class="close invert xl:hidden">
+                <img class="closeIcon absolute right-5 top-5 w-10" src="/images/close.svg" alt="">
+            </div>
+            <div class="HOME bg-[#1f1f1f] p-4 m-2 rounded-xl h-[20vh]">
+                <ul class="">
+                    <li class="logo invert w-[50vw] ml-2 mb-3 pb-3 flex gap-5 text-2xl"><img src="/images/logo.svg"
+                            alt="logo">Moodify..</li>
+                    <li class="flex invert text-[18px] pb-2 font-semibold gap-5 ml-3"><img class="w-5"
+                            src="/images/home.svg" alt="home">Home</li>
+                    <li class="flex invert text-[18px] font-semibold gap-5 ml-3"><img class="w-5"
+                            src="/images/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+
+            <div class="LIBRARY bg-[#181818] rounded-xl p-4 m-2 text-white h-[73vh] ">
+
+                <div class="libraryLogo pb-3">
+                    <ul class="flex justify-between">
+                        <li class="flex text-xl font-bold gap-2 w-40"><img class="invert" src="/images/library.svg"
+                                alt="library">your Library</li>
+                        <li><button><img class="invert" src="/images/add.svg" alt=""></button></li>
+                    </ul>
+                </div>
+
+                <div class="songList h-[50vh] max-h-[50vh] overflow-x-scroll scrollbar-dark">
+                    <ul class="px-2"></ul>
+                </div>
+                <div class="footer flex flex-wrap gap-5 text-xs text-gray-400 pt-8 cursor-pointer">
+                    <a>Legal</a>
+                    <a>Safety & Privacy Center</a>
+                    <a>Privacy Policy</a>
+                    <a>Cookies</a>
+                    <a>About Ads</a>
+                    <a>Accessibility</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="right xl:w-[73vw] xl:h-[95vh] text-white xl:m-2 relative">
+            <div class="header m-2 p-2 bg-[#181818] rounded-xl flex justify-between">
+                <div class="hamburger invert xl:hidden">
+                    <img class="w-10" src="images/menu.svg" alt="">
+                </div>
+                <div class="directions ml-4 mt-2">
+                    <button class="mr-5 "><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="login">
+                    <button class="font-bold text-gray-400">Sign up</button>
+                    <button class="py-2 px-5 mx-3 bg-white text-[1rem] text-black rounded-3xl font-bold">Log in</button>
+                </div>
+            </div>
+
+            <div class="playlists bg-[#181818] p-5 rounded-xl ">
+
+                <span class="text-3xl font-semibold p-3 ">Moodify Playlists</span>
+
+                <div class="CardContainer flex flex-wrap xl:max-h-[60vh] xl:gap-10 overflow-y-scroll scrollbar-dark">
+
+    
+                </div>
+            </div>
+
+            <div class="playbar absolute bottom-0 bg-[#545b5e] w-full p-3 pt-1 rounded-xl">
+                <div class="upperpart flex justify-between">
+                    <div class="songName xl:w-[30vw] pl-7 pt-2"></div>
+                    <div class="navButton xl:w-[30vw] flex justify-center gap-4 invert">
+                        <img id="previous" class="max-w-8" src="/images/previous.svg" alt="">
+                        <img id="play" class="w-10" src="/images/play2.svg" alt="">
+                        <img id="next" class="max-w-8" src="/images/next.svg" alt="">
+                    </div>
+                    <div class="timeAndVolume xl:w-[30vw] flex justify-evenly">
+                        <div class="songTime pt-2 flex flex-wrap">00:00 / 00:00</div>
+                        <div class="volume invert flex gap-2 right-8">
+                            <img width="28px" src="/images/volume.svg" alt="">
+                            <input type="range" name="volume">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seekbar w-[full] border-2 border-white cursor-pointer relative">
+                    <div class="circle h-4 w-4 bg-white rounded-full absolute -mt-2 left-0 duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
